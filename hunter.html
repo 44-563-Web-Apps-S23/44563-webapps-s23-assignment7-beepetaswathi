@@ -35,7 +35,7 @@
     <div>Click on the bushes to search for the mouse, beware the cat</div>
   <div class="flex-container">
         <div id="bushes">Number of bushes checked is zero</div>
-        <div id="penalty">Penalty is zero</div>
+        <div id="Penalty">penalty is zero</div>
         <div onclick="help()">Click for help</div>
         <div id="help">Help report</div>
     </div>
@@ -87,7 +87,7 @@
       let penalty=0;
       let lastCheck=0;
       let mouseLocation=13;
-      let bigcatLocation=21;
+      let tigerLocation=21;
       let gameOver=false;
       let ids=[ ];
       for(let i=0;i<=23;i++){
@@ -132,7 +132,7 @@
         }
          
         bushes.innerHTML="Number of bushes checked is "+checkCount;
-        penalty.innerHTML="Penalty is "+penalty;
+        Penalty.innerHTML="Penalty is "+penalty;
         
         
     }
@@ -190,9 +190,9 @@
             }
         console.log("col1 is"+col1);
         console.log("row1 is"+row1);
-       // console.log("TIGER first "+ (row1+1==row && col1+1==col));
-       // console.log("TIGER last "+(row1-1==row && col1-1==col));
-       // console.log("TIGER Whole "+ (row1+1==row && col1+1==col)||(row1-1==row && col1-1==col));
+       // console.log("CAT first "+ (row1+1==row && col1+1==col));
+       // console.log("CAT last "+(row1-1==row && col1-1==col));
+       // console.log("CAT Whole "+ (row1+1==row && col1+1==col)||(row1-1==row && col1-1==col));
         col2=21%6;
         row2=Math.round(21/4);
         
@@ -360,7 +360,7 @@
                help.innerHTML="Meow";
             }
             else if((row1+1==row2 && col1+1==col2)||(row1-1==row2 && col1-1==col2)){
-                console.log("big cat-------****");
+                console.log("tiger-------****");
                help.innerHTML="squeek";
                console.log("penalty --"+penalty);
                penalty=penalty+2;
@@ -369,7 +369,7 @@
                 console.log("else");
                 help.innerHTML="sorry, no help available"; 
             }*/
-            penalty.innerHTML="Penalty is "+penalty;
+            Penalty.innerHTML="Penalty is "+penalty;
             //document.getElementById("help").innerHTML="sorry";
         }
 
